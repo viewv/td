@@ -15,10 +15,10 @@ jobs:
     - uses: actions/checkout@v2
     
     - name: Install dependence
-      run: brew install gperf cmake openssl
+      run: brew install gperf
 
     - name: Configure CMake
-      run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=Release -DOPENSSL_ROOT_DIR=/usr/local/opt/openssl/ -DCMAKE_INSTALL_PREFIX:PATH=../tdlib ..
+      run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=Release -DOPENSSL_ROOT_DIR=/usr/local/opt/openssl/ -DCMAKE_INSTALL_PREFIX:PATH=/tdlib
 
     - name: Build
       # Build your program with the given configuration
