@@ -28,5 +28,5 @@ jobs:
       uses: actions/upload-artifact@master
       with:
         name: tdlib
-        path: /
+        path: tdlib/
       
